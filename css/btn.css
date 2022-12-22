@@ -1,0 +1,87 @@
+.button {
+  position: absolute;
+  margin: auto;
+  /*margin-top: 600px;*/
+  width: 280px;
+  height: 70px;
+  text-align: center;
+  border-radius: 35px;
+  background-image: linear-gradient(
+    to right,
+    rgb(72, 72, 240),
+    yellow,
+    rgb(255, 34, 237),
+    rgb(78, 78, 248)
+  );
+  background-size: 400%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border-radius: 35px;
+  background-image: linear-gradient(
+    to right,
+    rgb(72, 72, 240),
+    yellow,
+    rgb(255, 34, 237),
+    rgb(78, 78, 248)
+  );
+  background-size: 400%;
+  filter: blur(12px);
+  z-index: -1;
+}
+
+
+.button:hover {
+  animation: light 8s infinite;
+}
+
+
+.button:hover::before {
+  animation: light 8s infinite;
+}
+
+@keyframes light {
+  100% {
+    background-position: -400% 0;
+  }
+}
+p {
+  margin: 0 auto;
+  line-height: 70px;
+  font-size: 25px;
+  color: white;
+}
+
+/*去除a标签下划线*/
+a {
+	text-decoration: none;
+    color: white;
+}
+/*去除未被访问的a标签的下划线*/
+a:link {
+	text-decoration: none;
+}
+/*去除已经被访问过的a标签的下划线*/
+a:visited {
+	text-decoration: none;
+}
+/*去除鼠标悬停时的a标签的下划线*/
+a:hover {
+	text-decoration: none;
+}
+/*去除正在点击的a标签的下划线（鼠标按下，尚未松开）*/
+a:active {
+	text-decoration: none;
+}
+/*去除获得焦点的a标签的下划线（被鼠标点击过）*/
+a:focus {
+	text-decoration: none;
+}
